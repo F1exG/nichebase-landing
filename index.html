@@ -2,132 +2,506 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>#000000</title>
-    <link type="image/x-icon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkYGD4z0ABYBw1gGE0DBhGw4BhWIQBAE5OEAELnjVHAAAAAElFTkSuQmCC">
-    <style>
-        :root {
-            --color: #000000;
-            --color-transparent: #00000022;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niche Base | AI Shadow Operations for Scalable Growth</title>
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Configure Tailwind and use Inter font, along with luxury colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary-dark': '#111827', // Dark Charcoal/Black
+            'accent-gold': '#D4AF37', // Classic Gold
+            'background-light': '#F9FAFB', // Elegant Off-White
+          },
+          fontFamily: {
+            sans: ['Inter', 'DM Sans', 'sans-serif'],
+          },
         }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-        ::selection {
-            background: var(--color-transparent);
-        }
+    body {
+      background-color: #F9FAFB;
+      color: #111827;
+      font-family: 'DM Sans', 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-        html,
-        body {
-            background: var(--color);
-            height: 100%;
-            margin: 0;
-        }
+    .cta-button {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
+    /* Gold Button Style */
+    .cta-gold {
+      background-color: #D4AF37;
+      color: #111827;
+      border: 1px solid #D4AF37;
+    }
 
-        #color {
-            background: white;
-            color: var(--color);
-            font-size: 2.5rem;
-            font-weight: 300;
-            padding: 2.25rem 3rem;
-            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-            cursor: text;
-        }
-    </style>
+    .cta-gold:hover {
+      background-color: #C19E30;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Dark Button Style */
+    .cta-dark {
+      background-color: #111827;
+      color: #F9FAFB;
+      border: 1px solid #111827;
+    }
+
+    .cta-dark:hover {
+      background-color: #000;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(17, 24, 39, 0.2);
+    }
+
+    /* Input focus effect */
+    input:focus,
+    textarea:focus {
+      border-color: #D4AF37 !important;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.5);
+      outline: none;
+    }
+
+    /* Minimalist AI visual effect for the hero */
+    .ai-glow {
+      animation: pulse-glow 3s infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        box-shadow: 0 0 5px #D4AF37, 0 0 10px rgba(212, 175, 55, 0.3);
+      }
+
+      100% {
+        box-shadow: 0 0 20px #D4AF37, 0 0 40px rgba(212, 175, 55, 0.6);
+      }
+    }
+  </style>
 </head>
 
-<body>
-    <p id="color">#000000</p>
-    <script>
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
+<body class="min-h-screen">
+
+  <!-- Header / Navigation (Minimal and fixed) -->
+  <header class="bg-primary-dark shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <!-- Logo Placeholder -->
+      <div class="flex items-center space-x-2">
+        <!-- IMPORTANT: Replace with actual logo image -->
+        <div class="text-xl font-extrabold tracking-wider text-accent-gold border-b-2 border-accent-gold pb-1">NICHE
+          BASE</div>
+      </div>
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+        <a href="#about" class="hover:text-accent-gold transition duration-200">About</a>
+        <a href="#services" class="hover:text-accent-gold transition duration-200">Services</a>
+        <a href="#model" class="hover:text-accent-gold transition duration-200">Earnings Model</a>
+        <a href="#contact"
+          class="cta-gold px-4 py-1 rounded-full text-xs font-bold hover:bg-white hover:text-primary-dark">Book a
+          Call</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="bg-primary-dark text-background-light py-24 md:py-36 min-h-[80vh] flex items-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <!-- Minimal Visual: Abstract AI sphere/lines -->
+        <div class="w-24 h-24 mx-auto mb-10 relative">
+          <div class="absolute inset-0 rounded-full bg-accent-gold opacity-50 blur-xl ai-glow"></div>
+          <svg class="absolute inset-0 w-full h-full text-accent-gold" viewBox="0 0 100 100" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="30" stroke="currentColor" stroke-width="2" opacity="0.8" />
+            <path d="M50 0 L50 100 M0 50 L100 50" stroke="currentColor" stroke-width="0.5" opacity="0.6" />
+            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="0.3" opacity="0.3" />
+          </svg>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-6 max-w-5xl mx-auto">
+          AI Shadow Operations for <span class="text-accent-gold">Silent, Scalable Growth.</span>
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl md:text-2xl font-light text-gray-300 mb-12 max-w-4xl mx-auto">
+          Niche Base operates behind the scenes to automate, optimize, and scale creators and small businesses—without
+          ever being visible.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+          <a href="#services" class="cta-gold px-8 py-3 rounded-xl text-lg font-bold">
+            Explore Our Services
+          </a>
+          <a href="#contact" class="cta-dark px-8 py-3 rounded-xl text-lg font-bold hover:bg-gray-800">
+            Book a Strategy Call
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Niche Base -->
+    <section id="about" class="py-24 md:py-32 bg-background-light">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg font-bold text-accent-gold uppercase mb-3 tracking-widest">About Us</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="space-y-6">
+            <h3 class="text-4xl md:text-5xl font-extrabold leading-tight text-primary-dark">
+              The Elite Concept of Shadow Operating.
+            </h3>
+            <p class="text-xl text-gray-700">
+              **Shadow Operations** is the integration of advanced AI workflows directly into your existing
+              infrastructure. Unlike external consultants, we become a high-performance layer of automation that works
+              24/7, invisible to your team and customers.
+            </p>
+            <p class="text-lg text-gray-600">
+              We don't manage; we automate. We analyze your bottlenecks—from content creation pipelines to customer
+              support—and deploy proprietary AI systems that solve them, guaranteeing scalable, reliable output without
+              the complexity of traditional hiring.
+            </p>
+          </div>
+
+          <!-- Feature visualization -->
+          <div class="p-8 bg-white shadow-xl rounded-2xl border-l-4 border-accent-gold">
+            <ul class="space-y-4 text-primary-dark">
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl text-accent-gold">&#9679;</span>
+                <div class="font-semibold text-lg">Fully Managed Automation</div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl text-accent-gold">&#9679;</span>
+                <div class="font-semibold text-lg">Zero Internal Visibility</div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl text-accent-gold">&#9679;</span>
+                <div class="font-semibold text-lg">Dedicated AI Workflow Engineering</div>
+              </li>
+              <li class="flex items-start space-x-3">
+                <span class="text-2xl text-accent-gold">&#9679;</span>
+                <div class="font-semibold text-lg">100% Performance-Based Alignment</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="py-24 md:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg font-bold text-accent-gold uppercase mb-4 tracking-widest text-center">Our Domain</h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-primary-dark text-center mb-16">
+          Our Suite of Invisible Operations.
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+          <!-- Service Card 1: Shadow Automation -->
+          <div class="p-8 border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- Cog Icon (Workflow) -->
+              ⚙️
+            </span>
+            <h4 class="text-2xl font-bold mb-3">Shadow Automation</h4>
+            <p class="text-gray-600">We integrate deep-level automation for repetitive tasks, allowing you to reallocate
+              your core focus purely on creative output.</p>
+          </div>
+
+          <!-- Service Card 2: AI Workflow Engineering -->
+          <div class="p-8 border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- Diagram Icon (Engineering) -->
+              🔬
+            </span>
+            <h4 class="text-2xl font-bold mb-3">AI Workflow Engineering</h4>
+            <p class="text-gray-600">Custom, bespoke AI systems designed to your exact business logic. Built, deployed,
+              and maintained entirely by Niche Base specialists.</p>
+          </div>
+
+          <!-- Service Card 3: Autonomous Business Systems -->
+          <div class="p-8 border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- System Icon (Autonomy) -->
+              🛰️
+            </span>
+            <h4 class="text-2xl font-bold mb-3">Fully Autonomous Business Systems</h4>
+            <p class="text-gray-600">From lead nurturing to fulfillment, we build self-governing systems that run your
+              backend without daily oversight.</p>
+          </div>
+
+          <!-- Service Card 4: Niche-Focused Growth -->
+          <div class="p-8 border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- Rocket Icon (Growth) -->
+              🚀
+            </span>
+            <h4 class="text-2xl font-bold mb-3">Niche-Focused Growth Playbooks</h4>
+            <p class="text-gray-600">Specialized AI models trained exclusively on your niche data to find opportunities
+              for monetization and audience expansion.</p>
+          </div>
+
+          <!-- Service Card 5: White-Label AI Assistants -->
+          <div class="p-8 border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- Robot Icon (Assistant) -->
+              🤖
+            </span>
+            <h4 class="text-2xl font-bold mb-3">White-Label AI Assistants</h4>
+            <p class="text-gray-600">Internal or customer-facing AI tools branded as your own, powered by our invisible
+              AI infrastructure.</p>
+          </div>
+
+          <!-- Service Card 6: Confidentiality & Privacy -->
+          <div class="p-8 bg-primary-dark text-background-light rounded-2xl shadow-2xl">
+            <span class="text-4xl text-accent-gold mb-4 inline-block">
+              <!-- Lock Icon (Confidentiality) -->
+              🔒
+            </span>
+            <h4 class="text-2xl font-bold mb-3">Guaranteed Confidentiality</h4>
+            <p class="text-gray-400">All data, strategy, and systems remain strictly confidential. Our shadow operation
+              is entirely invisible and private by contract.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Earnings Model Section -->
+    <section id="model" class="py-24 md:py-32 bg-background-light">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-lg font-bold text-accent-gold uppercase mb-4 tracking-widest">Our Partnership Model</h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-primary-dark mb-16">
+          Performance-Driven, Risk-Free Alignment.
+        </h3>
+
+        <div class="bg-primary-dark p-10 md:p-12 rounded-3xl shadow-2xl text-background-light mb-12">
+          <p class="text-2xl font-light mb-6 border-b border-gray-700 pb-6 italic max-w-4xl mx-auto">
+            "Niche Base integrates into your WHOP products and automates your backend systems. We scale your earnings,
+            and we only take a share of the revenue we help you generate."
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+            <div
+              class="p-6 bg-gray-900 rounded-xl border-t-4 border-accent-gold transition duration-300 hover:scale-[1.03]">
+              <span class="text-4xl text-accent-gold mb-2 block">💸</span>
+              <h4 class="text-xl font-bold mb-1">No Upfront Cost</h4>
+              <p class="text-sm text-gray-400">Our initial engineering is a commitment to your potential. No retainers
+                or hourly fees.</p>
+            </div>
+
+            <div
+              class="p-6 bg-gray-900 rounded-xl border-t-4 border-accent-gold transition duration-300 hover:scale-[1.03]">
+              <span class="text-4xl text-accent-gold mb-2 block">🛡️</span>
+              <h4 class="text-xl font-bold mb-1">Zero Risk Integration</h4>
+              <p class="text-sm text-gray-400">If we don't scale your profits, we don't get paid. Our success is
+                directly tied to yours.</p>
+            </div>
+
+            <div
+              class="p-6 bg-gray-900 rounded-xl border-t-4 border-accent-gold transition duration-300 hover:scale-[1.03]">
+              <span class="text-4xl text-accent-gold mb-2 block">📈</span>
+              <h4 class="text-xl font-bold mb-1">Profit Share Only</h4>
+              <p class="text-sm text-gray-400">We earn a calculated percentage exclusively from the WHOP revenue our
+                systems generate.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="cta-gold inline-block px-10 py-3 rounded-xl text-xl font-bold">
+          Secure Your Partnership Slot &rarr;
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. Testimonials (Minimal & Luxury) -->
+    <section id="testimonials" class="py-24 md:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg font-bold text-accent-gold uppercase mb-4 tracking-widest text-center">Silent Endorsement
+        </h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-primary-dark text-center mb-16">
+          Why the Top 1% Choose to Operate in Shadow.
+        </h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <!-- Testimonial Card 1 -->
+          <div class="p-8 border border-gray-300 rounded-2xl bg-background-light shadow-md">
+            <p class="text-2xl italic mb-4 text-gray-800 leading-relaxed">
+              "The automation is invisible and relentless. We scaled our enrollment 30% in a month without adding a
+              single new employee."
+            </p>
+            <div class="flex items-center space-x-3 mt-6">
+              <div class="w-10 h-10 bg-gray-400 rounded-full grayscale"></div>
+              <p class="font-semibold text-primary-dark">S.K. | High-Ticket Course Creator</p>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="p-8 border border-gray-300 rounded-2xl bg-background-light shadow-md">
+            <p class="text-2xl italic mb-4 text-gray-800 leading-relaxed">
+              "The zero-risk model was the key. Niche Base proved their value before they ever earned a dollar from our
+              systems."
+            </p>
+            <div class="flex items-center space-x-3 mt-6">
+              <div class="w-10 h-10 bg-gray-400 rounded-full grayscale"></div>
+              <p class="font-semibold text-primary-dark">A.J. | Niche Community Founder</p>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="p-8 border border-gray-300 rounded-2xl bg-background-light shadow-md">
+            <p class="text-2xl italic mb-4 text-gray-800 leading-relaxed">
+              "It’s not outsourcing, it’s an upgrade. Our focus is back on content, and our fulfillment runs like a
+              Swiss watch."
+            </p>
+            <div class="flex items-center space-x-3 mt-6">
+              <div class="w-10 h-10 bg-gray-400 rounded-full grayscale"></div>
+              <p class="font-semibold text-primary-dark">M.W. | Financial Systems Consultant</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Working Contact Form -->
+    <section id="contact" class="py-24 md:py-32 bg-primary-dark text-background-light">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg font-bold text-accent-gold uppercase mb-4 tracking-widest text-center">Initiate Dialogue</h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-white text-center mb-16">
+          Begin Your Invisible Ascendancy.
+        </h3>
+
+        <div class="bg-gray-900 p-8 md:p-12 rounded-2xl shadow-2xl">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+            <p id="form-success"
+              class="text-center p-4 bg-green-900 border border-green-700 rounded-lg text-green-300 hidden font-semibold">
+              Thank you. Your request has been securely noted. A representative will contact you shortly.
+            </p>
+            <p id="form-error"
+              class="text-center p-4 bg-red-900 border border-red-700 rounded-lg text-red-300 hidden font-semibold">
+              An error occurred. Please ensure all fields are complete and try again, or contact us directly.
+            </p>
+
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Your Name/Brand Principal</label>
+              <input type="text" id="name" name="name" required
+                class="w-full p-4 border border-gray-700 bg-gray-800 rounded-xl text-white">
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Private Contact Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full p-4 border border-gray-700 bg-gray-800 rounded-xl text-white">
+            </div>
+
+            <div>
+              <label for="whop_link" class="block text-sm font-medium text-gray-400 mb-2">Your WHOP/Main Product
+                Link</label>
+              <input type="url" id="whop_link" name="whop_link" required
+                class="w-full p-4 border border-gray-700 bg-gray-800 rounded-xl text-white">
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Briefly Describe Your Scaling
+                Challenge</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full p-4 border border-gray-700 bg-gray-800 rounded-xl text-white"></textarea>
+            </div>
+
+            <button type="submit" id="submit-button" class="cta-gold w-full text-xl py-4 rounded-xl font-bold mt-4">
+              Submit Consultation Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. Footer (Ultra Minimal) -->
+  <footer class="bg-primary-dark border-t border-gray-800 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <nav class="space-x-6 mb-4 text-sm font-medium">
+        <a href="#services" class="text-gray-400 hover:text-accent-gold transition duration-200">Services</a>
+        <span class="text-gray-600">|</span>
+        <a href="#about" class="text-gray-400 hover:text-accent-gold transition duration-200">About</a>
+        <span class="text-gray-600">|</span>
+        <a href="#contact" class="text-gray-400 hover:text-accent-gold transition duration-200">Contact</a>
+        <span class="text-gray-600">|</span>
+        <a href="#" class="text-gray-400 hover:text-accent-gold transition duration-200">Partner Program</a>
+      </nav>
+
+      <p class="text-xs text-gray-600 mt-6">
+        &copy; 2025 Niche Base. Invisible, High-Performance AI Operations. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Form Submission Handling -->
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+
+      const form = document.getElementById('contact-form');
+      const successMsg = document.getElementById('form-success');
+      const errorMsg = document.getElementById('form-error');
+      const submitButton = document.getElementById('submit-button');
+
+      // Simple client-side validation check
+      const inputs = form.querySelectorAll('input[required], textarea[required]');
+      let allValid = true;
+      inputs.forEach(input => {
+        if (!input.value) {
+          allValid = false;
         }
+      });
 
-        function hslToHex(h, s, l) {
-            h /= 360;
-            s /= 100;
-            l /= 100;
-            var r = void 0,
-                g = void 0,
-                b = void 0;
-            if (s === 0) {
-                r = g = b = l; // achromatic
-            } else {
-                var hue2rgb = function hue2rgb(p, q, t) {
-                    if (t < 0) t += 1;
-                    if (t > 1) t -= 1;
-                    if (t < 1 / 6) return p + (q - p) * 6 * t;
-                    if (t < 1 / 2) return q;
-                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-                    return p;
-                };
-                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-                var p = 2 * l - q;
-                r = hue2rgb(p, q, h + 1 / 3);
-                g = hue2rgb(p, q, h);
-                b = hue2rgb(p, q, h - 1 / 3);
-            }
-            var toHex = function toHex(x) {
-                var hex = Math.round(x * 255).toString(16);
-                return hex.length === 1 ? '0' + hex : hex;
-            };
-            return '#' + toHex(r) + toHex(g) + toHex(b);
-        }
+      if (!allValid) {
+        // Display error message for mock
+        successMsg.classList.add('hidden');
+        errorMsg.classList.remove('hidden');
+        return;
+      }
 
-        window.onload = function () {
-            let stopProp = function (ev) {
-                ev.stopPropagation();
-            }
+      // --- MOCK FUNCTIONALITY START ---
+      // In a real application, you would replace this block with a fetch() call 
+      // to a service like Web3Forms, Formspree, or your own backend API.
 
-            var colorElement = document.getElementById("color");
-            colorElement.addEventListener("click", stopProp, false);
-            colorElement.addEventListener("mousedown", stopProp, false);
+      // Simulate API latency
+      submitButton.textContent = "Sending...";
+      submitButton.disabled = true;
 
-            var setFavicon = function (hex) {
-                var canvas = document.createElement('canvas');
-                canvas.width = 16;
-                canvas.height = 16;
-                var ctx = canvas.getContext('2d');
-                ctx.fillStyle = hex;
-                ctx.fillRect(0, 0, 16, 16);
-                document.getElementsByTagName('link')[0].href = canvas.toDataURL("image/x-icon");
-            }
+      setTimeout(() => {
+        // Assume success (for mock-up purposes)
+        errorMsg.classList.add('hidden');
+        successMsg.classList.remove('hidden');
 
-            var setRandomColor = function setRandomColor() {
-                var h = void 0,
-                    s = void 0,
-                    l = void 0;
+        // Clear and disable form fields upon mock success
+        inputs.forEach(input => {
+          input.value = '';
+          input.disabled = true;
+        });
+        submitButton.textContent = "Request Sent";
+      }, 1500);
 
-                h = randomInt(0, 359);
-                s = randomInt(55, 75);
-                l = randomInt(40, 60);
-
-                document.documentElement.style.setProperty('--color', 'hsl(' + h + ', ' + s + '%, ' + l + '%)');
-                var hex = hslToHex(h, s, l);
-                document.title = hex;
-                colorElement.innerHTML = hex;
-                document.documentElement.style.setProperty('--color-transparent', hex + '22');
-
-                setFavicon(hex);
-            };
-            setRandomColor();
-
-            var body = document.getElementsByTagName("body")[0];
-            body.addEventListener("mousedown", function (ev) {
-                ev.preventDefault();
-            });
-            body.addEventListener("click", function () {
-                setRandomColor();
-            }, false);
-        };
-    </script>
+      // --- MOCK FUNCTIONALITY END ---
+    }
+  </script>
 </body>
 
 </html>
